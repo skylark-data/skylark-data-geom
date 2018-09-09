@@ -1,7 +1,7 @@
 /**
  * skylark-utils-math - The math features enhancement for skylark utils.
  * @author Hudaokeji Co.,Ltd
- * @version v0.9.0-beta
+ * @version v0.9.1
  * @link www.skylarkjs.org
  * @license MIT
  */
@@ -2726,9 +2726,21 @@ define('skylark-utils-math/math',[
     "skylark-utils/skylark",
     "skylark-utils/langx"
 ], function(skylark, langx) {
+	
 	var math = skylark.math = {
 
+	  log2 : function (x) {
+	    var n = 1, i = 0;
+	    while (x > n) {
+	      n <<= 1;
+	      i++;
+	    }
+	    return i;
+	  }
+
 	};
+
+	langx.mixin(math,Math);
 
 	return math;
 });

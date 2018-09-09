@@ -1,6 +1,6 @@
 {
   "name": "skylark-utils-math",
-  "version": "0.9.0-beta",
+  "version": "0.9.1",
   "description": "The math features enhancement for skylark utils.",
   "main": "-",
   "scripts": {
@@ -45,8 +45,8 @@
     "gulp-usemin": "^0.3.11",
     "gulp-util": "^3.0.6",
     "run-sequence": "^2.1.0",
-    "skylark-langx": "https://github.com/skylarkjs/skylark-langx#master",
-    "skylark-utils": "https://github.com/skylarkjs/skylark-utils#master"
+    "skylark-langx": "https://github.com/skylarklangx/skylark-langx#master",
+    "skylark-utils": "https://github.com/skylarkutils/skylark-utils#master"
   },
   "engines": {
     "node": ">=0.8.0"
