@@ -80,16 +80,6 @@
 
 })(function(define,require) {
 
-define('skylark-utils/skylark',["skylark-langx/skylark"], function(skylark) {
-    return skylark;
-});
-
-define('skylark-utils/langx',[
-    "skylark-langx/langx"
-], function(langx) {
-    return langx;
-});
-
 define('skylark-utils-math/math',[
     "skylark-utils/skylark",
     "skylark-utils/langx"
@@ -1866,7 +1856,7 @@ define('skylark-utils-math/transform/MatrixTransform',[
 		transform : /*Point*/function(/*Point*/point) {
 		},
 		
-		//�w�肳�ꂽ���E�{�b�N�X���ϊ����A���������傤�Ǌi�[�ł����傫���̎����s���E�{�b�N�X���Ԃ��܂��B
+		//�w�肳�ꂽ���E�{�b�N�X��ϊ����A�����傤�Ǌi�[�ł���傫���̎����s���E�{�b�N�X��Ԃ��܂��B
 		transformBounds : /*Rect*/function(/*Rect*/rect) {
 		},		
 		"initialize" : function(/*Martix*/matrix) {
@@ -2118,27 +2108,27 @@ define('skylark-utils-math/transform/TranslateTransform',[
 		},
 		"-public-" : {
 			"-attributes-" : {
-				//x ���ɉ����ĕ��s�ړ����鋗�����擾�܂��͐ݒ肵�܂��B
+				//x ���ɉ����ĕ��s�ړ����鋗����擾�܂��͐ݒ肵�܂��B
 				"x" : {
 					type : Number,
 					readOnly : true
 				},
-				//y ���ɉ����ăI�u�W�F�N�g���ϊ� (�ړ�) ���鋗�����擾�܂��͐ݒ肵�܂��B
+				//y ���ɉ����ăI�u�W�F�N�g��ϊ� (�ړ�) ���鋗����擾�܂��͐ݒ肵�܂��B
 				"y" : {
 					type : Number,
 					readOnly : true
 				}
 			},
 			"-methods-"	:	{
-				//���� ScaleTransform �̒l�̏ڍ׃R�s�[���쐬���ĕԂ��܂��B
+				//���� ScaleTransform �̒l�̏ڍ׃R�s�[��쐬���ĕԂ��܂��B
 				clone : /*ScaleTransform*/function() {
 				},
 				
-				//�w�肵���_���ϊ����A���ʂ��Ԃ��܂��B
+				//�w�肵���_��ϊ����A���ʂ�Ԃ��܂��B
 				transform : /*Point*/function(/*Point*/point) {
 				},
 				
-				//�w�肳�ꂽ���E�{�b�N�X���ϊ����A���������傤�Ǌi�[�ł����傫���̎����s���E�{�b�N�X���Ԃ��܂��B
+				//�w�肳�ꂽ���E�{�b�N�X��ϊ����A�����傤�Ǌi�[�ł���傫���̎����s���E�{�b�N�X��Ԃ��܂��B
 				transformBounds : /*Rect*/function(/*Rect*/rect) {
 				}
 			}
