@@ -56,7 +56,7 @@
                 args.push(require(dep));
             })
 
-            module.exports = module.factory.apply(window, args);
+            module.exports = module.factory.apply(globals, args);
         }
         return module.exports;
     };
@@ -72,7 +72,7 @@
     var skylarkjs = require("skylark-langx/skylark");
 
     if (isCmd) {
-      exports = skylarkjs;
+      module.exports = skylarkjs;
     } else {
       globals.skylarkjs  = skylarkjs;
     }
@@ -81,8 +81,8 @@
 })(function(define,require) {
 
 define('skylark-utils-math/math',[
-    "skylark-utils/skylark",
-    "skylark-utils/langx"
+    "skylark-langx/skylark",
+    "skylark-langx/langx"
 ], function(skylark, langx) {
 	
 	var math = skylark.math = {
@@ -1856,7 +1856,7 @@ define('skylark-utils-math/transform/MatrixTransform',[
 		transform : /*Point*/function(/*Point*/point) {
 		},
 		
-		//�w�肳�ꂽ���E�{�b�N�X��ϊ����A�����傤�Ǌi�[�ł���傫���̎����s���E�{�b�N�X��Ԃ��܂��B
+		//�w�肳�ꂽ���E�{�b�N�X��ϊ����A��������傤�Ǌi�[�ł���傫���̎����s���E�{�b�N�X��Ԃ��܂��B
 		transformBounds : /*Rect*/function(/*Rect*/rect) {
 		},		
 		"initialize" : function(/*Martix*/matrix) {
@@ -2108,19 +2108,19 @@ define('skylark-utils-math/transform/TranslateTransform',[
 		},
 		"-public-" : {
 			"-attributes-" : {
-				//x ���ɉ����ĕ��s�ړ����鋗����擾�܂��͐ݒ肵�܂��B
+				//x ���ɉ����ĕ��s�ړ����鋗�����擾�܂��͐ݒ肵�܂��B
 				"x" : {
 					type : Number,
 					readOnly : true
 				},
-				//y ���ɉ����ăI�u�W�F�N�g��ϊ� (�ړ�) ���鋗����擾�܂��͐ݒ肵�܂��B
+				//y ���ɉ����ăI�u�W�F�N�g��ϊ� (�ړ�) ���鋗�����擾�܂��͐ݒ肵�܂��B
 				"y" : {
 					type : Number,
 					readOnly : true
 				}
 			},
 			"-methods-"	:	{
-				//���� ScaleTransform �̒l�̏ڍ׃R�s�[��쐬���ĕԂ��܂��B
+				//���� ScaleTransform �̒l�̏ڍ׃R�s�[���쐬���ĕԂ��܂��B
 				clone : /*ScaleTransform*/function() {
 				},
 				
@@ -2128,7 +2128,7 @@ define('skylark-utils-math/transform/TranslateTransform',[
 				transform : /*Point*/function(/*Point*/point) {
 				},
 				
-				//�w�肳�ꂽ���E�{�b�N�X��ϊ����A�����傤�Ǌi�[�ł���傫���̎����s���E�{�b�N�X��Ԃ��܂��B
+				//�w�肳�ꂽ���E�{�b�N�X��ϊ����A��������傤�Ǌi�[�ł���傫���̎����s���E�{�b�N�X��Ԃ��܂��B
 				transformBounds : /*Rect*/function(/*Rect*/rect) {
 				}
 			}
@@ -2172,3 +2172,4 @@ define('skylark-utils-math', ['skylark-utils-math/main'], function (main) { retu
 
 
 },this);
+//# sourceMappingURL=sourcemaps/skylark-utils-math.js.map

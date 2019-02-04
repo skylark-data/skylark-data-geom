@@ -5,5 +5,5 @@
  * @link www.skylarkjs.org
  * @license MIT
  */
-define(["skylark-utils/skylark","skylark-utils/langx"],function(r,n){var a=r.math={log2:function(r){for(var n=1,a=0;r>n;)n<<=1,a++;return a}};return n.mixin(a,Math),a});
+define(["skylark-langx/skylark","skylark-langx/langx"],function(n,a){var r=n.math={log2:function(n){for(var a=1,r=0;n>a;)a<<=1,r++;return r}};return a.mixin(r,Math),r});
 //# sourceMappingURL=sourcemaps/math.js.map

@@ -5,5 +5,5 @@
  * @link www.skylarkjs.org
  * @license MIT
  */
-define(["skylark-langx/langx","./math","./Geometry"],function(t,n,i){var r=n.Polyline=i.inherit({klassName:"Polyline",bounds:{get:function(){for(var t=this._,n=t.points,i=n.length,r=n[0],e={l:r.x,t:r.y,r:r.x,b:r.y},l=1;l<i;++l)r=n[l],e.l>r.x&&(e.l=r.x),e.r<r.x&&(e.r=r.x),e.t>r.y&&(e.t=r.y),e.b<r.y&&(e.b=r.y);var o={x:e.l,y:e.t,width:e.r-e.l,height:e.b-e.t};return o}},points:{get:function(){return this._.points}},init:function(t){var n=this._={};n.points=t?t:[]}});return r});
+define(["skylark-langx/langx","./math","./Geometry"],function(t,n,i){return n.Polyline=i.inherit({klassName:"Polyline",bounds:{get:function(){for(var t=this._.points,n=t.length,i=t[0],e={l:i.x,t:i.y,r:i.x,b:i.y},r=1;r<n;++r)i=t[r],e.l>i.x&&(e.l=i.x),e.r<i.x&&(e.r=i.x),e.t>i.y&&(e.t=i.y),e.b<i.y&&(e.b=i.y);return{x:e.l,y:e.t,width:e.r-e.l,height:e.b-e.t}}},points:{get:function(){return this._.points}},init:function(t){(this._={}).points=t||[]}})});
 //# sourceMappingURL=sourcemaps/Polyline.js.map

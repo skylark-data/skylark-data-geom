@@ -1,6 +1,6 @@
 define([
-    "skylark-utils/skylark",
-    "skylark-utils/langx"
+    "skylark-langx/skylark",
+    "skylark-langx/langx"
 ], function(skylark, langx) {
 	
 	var math = skylark.math = {
