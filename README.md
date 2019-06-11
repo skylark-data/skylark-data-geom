@@ -1,13 +1,12 @@
-# skylark-utils-math
-The math features enhancement for skylark utils.
+# skylark-data-geom
+The skylarkjs geom class library.
 
 ## Dependences
 
 | Project                                                      | Status | Description                           |
 | ------------------------------------------------------------ | ------ | ------------------------------------- |
 | [skylark-langx](https://github.com/skylarklangx/skylark-langx) |        | Javascript language extension library |
-| [skylark-utils](https://github.com/skylarkutils/skylark-utils) |        | An Universal HTML5 Javascript Library |
-| [skylark-utils-dom](https://github.com/skylarkutils/skylark-utils-dom) |        | An Universal DOM Utility Library      |
+
 
 ## Different builds
 
@@ -15,10 +14,10 @@ builds are in the directory dist.
 
 |                      | build                                  | Description              |
 | -------------------- | -------------------------------------- | ------------------------ |
-| full                 | skylark-utils-math-all.js              | included dependences     |
-| only                 | skylark-utils-math.js                  | not included dependences |
-| full （development） | uncompressed/skylark-utils-math-all.js | included dependences     |
-| only （development） | uncompressed/skylark-utils-math.js     | not included dependences |
+| full                 | skylark-data-geom-all.js              | included dependences     |
+| only                 | skylark-data-geom.js                  | not included dependences |
+| full （development） | uncompressed/skylark-data-geom-all.js | included dependences     |
+| only （development） | uncompressed/skylark-data-geom.js     | not included dependences |
 
 Please use the "full" version when using this library alone, and use the "only" version when using other skylark libraries.
 
@@ -26,9 +25,9 @@ Please use the "full" version when using this library alone, and use the "only" 
 
 You can get the latest version in many different ways:
 
-- Downloading [a ZIP file from master](https://github.com/skylarkutils/skylark-utils-math/archive/master.zip)
-- Cloning using Git: `git clone https://github.com/skylarkutils/skylark-utils-math.git`
-- Installing via NPM: `npm install https://github.com/skylarkutils/skylark-utils-math.git#master --save`
+- Downloading [a ZIP file from master](https://github.com/skylarkutils/skylark-data-geom/archive/master.zip)
+- Cloning using Git: `git clone https://github.com/skylark-data/skylark-data-geom.git`
+- Installing via NPM: `npm install https://github.com/skylark-data/skylark-data-geom.git#master --save`
 
 ## Building 
 
