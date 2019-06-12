@@ -3731,12 +3731,12 @@ define('skylark-langx/langx',[
 
     return skylark.langx = langx;
 });
-define('skylark-data-geom/math',[
+define('skylark-data-geom/geom',[
     "skylark-langx/skylark",
     "skylark-langx/langx"
 ], function(skylark, langx) {
 	
-	var math = skylark.math = {
+	var geom =  {
 
 	  log2 : function (x) {
 	    var n = 1, i = 0;
@@ -3749,15 +3749,14 @@ define('skylark-data-geom/math',[
 
 	};
 
-	langx.mixin(math,Math);
 
-	return math;
+	return skylark.attach("data.geom",geom);
 });
 define('skylark-data-geom/Geometry',[
     "skylark-langx/langx",
-    "./math"
-],function(langx, math) {
-	var Geometry  = math.Geometry = langx.klass({
+    "./geom"
+],function(langx, geom) {
+	var Geometry  = geom.Geometry = langx.klass({
 		"klassName"	:	"Geometry",
 	});
 
@@ -3768,11 +3767,11 @@ define('skylark-data-geom/Geometry',[
 
 define('skylark-data-geom/Point',[
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry",
-],function(langx, math, Geometry) {
+],function(langx, geom, Geometry) {
 
-    var Point = math.Point = Geometry.inherit({
+    var Point = geom.Point = Geometry.inherit({
         "klassName": "Point",
         "x": {
             get : function() {
@@ -3832,10 +3831,10 @@ define('skylark-data-geom/Point',[
 
 define('skylark-data-geom/Arrow',[
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry",
     "./Point"
-], function(langx, math, Geometry, Point) {
+], function(langx, geom, Geometry, Point) {
     var Direction = {
         "left" : 1,
         "top" : 2,
@@ -3843,7 +3842,7 @@ define('skylark-data-geom/Arrow',[
         "bottom" : 4
     };
 
-    var Arrow = math.Arrow = Geometry.inherit({
+    var Arrow = geom.Arrow = Geometry.inherit({
         "klassName": "Arrow",
         "bounds": {
             get : function() {
@@ -3949,11 +3948,11 @@ define('skylark-data-geom/Arrow',[
 
 define('skylark-data-geom/Circle',[
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry"
-], function(langx, math, Geometry) {
+], function(langx, geom, Geometry) {
 
-    var Circle = math.Circle = Geometry.inherit({
+    var Circle = geom.Circle = Geometry.inherit({
         "klassName": "Circle",
 
         "bounds": {
@@ -4025,11 +4024,11 @@ define('skylark-data-geom/Circle',[
 
 define('skylark-data-geom/Ellipse',[
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry",
-], function(langx, math, Geometry) {
+], function(langx, geom, Geometry) {
 
-    var Ellipse = math.Ellipse = Geometry.inherit({
+    var Ellipse = geom.Ellipse = Geometry.inherit({
         "klassName": "Ellipse",
 
         "bounds": {
@@ -4105,12 +4104,12 @@ define('skylark-data-geom/Ellipse',[
  */
 define('skylark-data-geom/Line',[
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry",
     "./Point"
-], function(langx, math, Geometry, Point) {
+], function(langx, geom, Geometry, Point) {
 
-    var Line = math.Line = Geometry.inherit({
+    var Line = geom.Line = Geometry.inherit({
         "klassName": "Line",
         "bounds": {
             get : function() {
@@ -4196,11 +4195,11 @@ define('skylark-data-geom/Line',[
 
 define('skylark-data-geom/Polyline',[
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry"
-], function(langx, math, Geometry) {
+], function(langx, geom, Geometry) {
 
-    var Polyline = math.Polyline = Geometry.inherit({
+    var Polyline = geom.Polyline = Geometry.inherit({
         "klassName": "Polyline",
 
         "bounds": {
@@ -4248,11 +4247,11 @@ define('skylark-data-geom/Polyline',[
 
 define('skylark-data-geom/PolyStar',[
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry",
-],function(langx, math, Geometry) {
+],function(langx, geom, Geometry) {
 
-    var PolyStar = math.PolyStar = Geometry.inherit({
+    var PolyStar = geom.PolyStar = Geometry.inherit({
         "klassName": "PolyStar",
         "bounds": {
             get : function() {
@@ -4330,11 +4329,11 @@ define('skylark-data-geom/PolyStar',[
 
 define('skylark-data-geom/Size',[
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry"
-],function(langx,math,Geometry) {
+],function(langx,geom,Geometry) {
 
-    var Size = math.Size = Geometry.inherit({
+    var Size = geom.Size = Geometry.inherit({
         "klassName": "Size",
 		// width: Number
 		//		The width of the default rectangle, value 100.
@@ -4398,13 +4397,13 @@ define('skylark-data-geom/Size',[
 
 define('skylark-data-geom/Rect',[
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry",
     "./Point",
 	"./Size"
-],function(langx, math, Geometry,Point,Size) {
+],function(langx, geom, Geometry,Point,Size) {
 
-    var Rect = math.Rect = Geometry.inherit({
+    var Rect = geom.Rect = Geometry.inherit({
         "klassName": "Rect",
         "bounds": {
             get : function() {
@@ -4577,8 +4576,8 @@ define('skylark-data-geom/Rect',[
 
 define( 'skylark-data-geom/transform/Matrix',[
     "skylark-langx/langx",
-    "../math",
-], function(langx,math){
+    "../geom",
+], function(langx,geom){
 	// reference easeljs/geom/Matrix2D  and dojox/gfx/matrix
 	
 	var DEG_TO_RAD = Math.PI/180;
@@ -4598,7 +4597,7 @@ define( 'skylark-data-geom/transform/Matrix',[
 	//|  0|  0| 1|
 	//|----------|
 	
-    var Matrix = math.TransformMatrix = langx.klass({
+    var Matrix = geom.TransformMatrix = langx.klass({
         "klassName": "TransformMatrix",
 
 		"_multiplyPoint"	: 	function(p){
@@ -5462,11 +5461,11 @@ define( 'skylark-data-geom/transform/Matrix',[
 
 define('skylark-data-geom/transform/Transform',[
     "skylark-langx/langx",
-    "../math",
+    "../geom",
 	"./Matrix"
-], function(langx,math, Matrix) {
+], function(langx,geom, Matrix) {
 
-    var Transform = math.Transform = langx.klass({
+    var Transform = geom.Transform = langx.klass({
         "klassName": "Transform",
 		"value": {
 			get : function(){
@@ -5480,13 +5479,13 @@ define('skylark-data-geom/transform/Transform',[
 
 define('skylark-data-geom/transform/MatrixTransform',[
     "skylark-langx/langx",
-    "../math",
+    "../geom",
 	"./Transform",
 	"../Point",
 	"../Rect"
-],function(langx,math,Transform,Point,Rect) {
+],function(langx,geom,Transform,Point,Rect) {
 
-    var MatrixTransform = math.MatrixTransform = Transform.inherit({
+    var MatrixTransform = geom.MatrixTransform = Transform.inherit({
         "klassName": "MatrixTransform",
 
 		"value"	:	{
@@ -5524,15 +5523,15 @@ define('skylark-data-geom/transform/MatrixTransform',[
 
 define('skylark-data-geom/transform/RotateTransform',[
     "skylark-langx/langx",
-    "../math",
+    "../geom",
 	"./Transform",
 	"./Matrix",
 	"../Point",
 	"../Rect"
-],function(langx,math,Transform,Matrix,Point,Rect) {
+],function(langx,geom,Transform,Matrix,Point,Rect) {
 
 
-    var RotateTransform = math.RotateTransform = Transform.inherit({
+    var RotateTransform = geom.RotateTransform = Transform.inherit({
         "klassName": "RotateTransform",
 
         "value": {
@@ -5584,14 +5583,14 @@ define('skylark-data-geom/transform/RotateTransform',[
 
 define('skylark-data-geom/transform/ScaleTransform',[
     "skylark-langx/langx",
-    "../math",
+    "../geom",
     "./Transform",
     "./Matrix",
     "../Point",
     "../Rect"
-], function(langx,math, Transform, Matrix, Point, Rect) {
+], function(langx,geom, Transform, Matrix, Point, Rect) {
 
-   var ScaleTransform = math.ScaleTransform = Transform.inherit({
+   var ScaleTransform = geom.ScaleTransform = Transform.inherit({
         "klassName": "ScaleTransform",
 
         "value": {
@@ -5649,14 +5648,14 @@ define('skylark-data-geom/transform/ScaleTransform',[
 
 define('skylark-data-geom/transform/SkewTransform',[
     "skylark-langx/langx",
-    "../math",
+    "../geom",
     "./Transform",
     "./Matrix",
     "../Point",
     "../Rect"
 ], function(Class, Transform, Matrix, Point, Rect) {
 
-   var SkewTransform = math.SkewTransform = Transform.inherit({
+   var SkewTransform = geom.SkewTransform = Transform.inherit({
         "klassName": "SkewTransform",
 
         "value": {
@@ -5697,18 +5696,18 @@ define('skylark-data-geom/transform/SkewTransform',[
 
 define('skylark-data-geom/transform/TranslateTransform',[
     "skylark-langx/langx",
-    "../math",
+    "../geom",
     "./Transform",
     "./Matrix",
     "../Point",
     "../Rect"
-],function(langx,math,Transform,Matrix,Point,Rect) {
+],function(langx,geom,Transform,Matrix,Point,Rect) {
 
     //|1   0   dx|
     //|0   1   dy|
     //|0   0    1|
 
-   var TranslateTransform = math.TranslateTransform = Transform.inherit({
+   var TranslateTransform = geom.TranslateTransform = Transform.inherit({
         "klassName": "TranslateTransform",
 
         "value": {
@@ -5797,7 +5796,7 @@ define('skylark-data-geom/transform/TranslateTransform',[
 });	
 
 define('skylark-data-geom/main',[
-    "./math",
+    "./geom",
     "./Arrow",
     "./Circle",
     "./Ellipse",
@@ -5815,9 +5814,9 @@ define('skylark-data-geom/main',[
     "./transform/SkewTransform",
     "./transform/Transform",
     "./transform/TranslateTransform"
-], function(math) {
+], function(geom) {
 
-	return math;
+	return geom;
 });
 define('skylark-data-geom', ['skylark-data-geom/main'], function (main) { return main; });
 

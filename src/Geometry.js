@@ -1,8 +1,8 @@
 define([
     "skylark-langx/langx",
-    "./math"
-],function(langx, math) {
-	var Geometry  = math.Geometry = langx.klass({
+    "./geom"
+],function(langx, geom) {
+	var Geometry  = geom.Geometry = langx.klass({
 		"klassName"	:	"Geometry",
 	});
 

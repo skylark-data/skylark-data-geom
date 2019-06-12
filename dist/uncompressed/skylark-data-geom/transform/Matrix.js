@@ -1,7 +1,7 @@
 define( [
     "skylark-langx/langx",
-    "../math",
-], function(langx,math){
+    "../geom",
+], function(langx,geom){
 	// reference easeljs/geom/Matrix2D  and dojox/gfx/matrix
 	
 	var DEG_TO_RAD = Math.PI/180;
@@ -21,7 +21,7 @@ define( [
 	//|  0|  0| 1|
 	//|----------|
 	
-    var Matrix = math.TransformMatrix = langx.klass({
+    var Matrix = geom.TransformMatrix = langx.klass({
         "klassName": "TransformMatrix",
 
 		"_multiplyPoint"	: 	function(p){

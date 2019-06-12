@@ -3,7 +3,7 @@ define([
     "skylark-langx/langx"
 ], function(skylark, langx) {
 	
-	var math = skylark.math = {
+	var geom =  {
 
 	  log2 : function (x) {
 	    var n = 1, i = 0;
@@ -16,7 +16,6 @@ define([
 
 	};
 
-	langx.mixin(math,Math);
 
-	return math;
+	return skylark.attach("data.geom",geom);
 });

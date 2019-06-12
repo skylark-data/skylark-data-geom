@@ -1,17 +1,17 @@
 define([
     "skylark-langx/langx",
-    "../math",
+    "../geom",
     "./Transform",
     "./Matrix",
     "../Point",
     "../Rect"
-],function(langx,math,Transform,Matrix,Point,Rect) {
+],function(langx,geom,Transform,Matrix,Point,Rect) {
 
     //|1   0   dx|
     //|0   1   dy|
     //|0   0    1|
 
-   var TranslateTransform = math.TranslateTransform = Transform.inherit({
+   var TranslateTransform = geom.TranslateTransform = Transform.inherit({
         "klassName": "TranslateTransform",
 
         "value": {

@@ -1,10 +1,10 @@
 define([
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry"
-], function(langx, math, Geometry) {
+], function(langx, geom, Geometry) {
 
-    var Polyline = math.Polyline = Geometry.inherit({
+    var Polyline = geom.Polyline = Geometry.inherit({
         "klassName": "Polyline",
 
         "bounds": {

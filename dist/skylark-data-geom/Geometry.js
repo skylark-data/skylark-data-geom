@@ -5,5 +5,5 @@
  * @link www.skylarkjs.org
  * @license MIT
  */
-define(["skylark-langx/langx","./math"],function(e,a){return a.Geometry=e.klass({klassName:"Geometry"})});
+define(["skylark-langx/langx","./geom"],function(e,a){return a.Geometry=e.klass({klassName:"Geometry"})});
 //# sourceMappingURL=sourcemaps/Geometry.js.map

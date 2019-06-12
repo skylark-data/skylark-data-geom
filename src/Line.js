@@ -8,12 +8,12 @@
  */
 define([
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry",
     "./Point"
-], function(langx, math, Geometry, Point) {
+], function(langx, geom, Geometry, Point) {
 
-    var Line = math.Line = Geometry.inherit({
+    var Line = geom.Line = Geometry.inherit({
         "klassName": "Line",
         "bounds": {
             get : function() {

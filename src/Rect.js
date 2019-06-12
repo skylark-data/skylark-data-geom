@@ -1,12 +1,12 @@
 define([
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry",
     "./Point",
 	"./Size"
-],function(langx, math, Geometry,Point,Size) {
+],function(langx, geom, Geometry,Point,Size) {
 
-    var Rect = math.Rect = Geometry.inherit({
+    var Rect = geom.Rect = Geometry.inherit({
         "klassName": "Rect",
         "bounds": {
             get : function() {

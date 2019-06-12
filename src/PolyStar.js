@@ -1,10 +1,10 @@
 define([
     "skylark-langx/langx",
-    "./math",
+    "./geom",
     "./Geometry",
-],function(langx, math, Geometry) {
+],function(langx, geom, Geometry) {
 
-    var PolyStar = math.PolyStar = Geometry.inherit({
+    var PolyStar = geom.PolyStar = Geometry.inherit({
         "klassName": "PolyStar",
         "bounds": {
             get : function() {
