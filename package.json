@@ -1,7 +1,7 @@
 {
-  "name": "skylark-data-geom",
+  "name": "skylark-graphics-geom",
   "version": "0.9.1",
-  "description": "The math features enhancement for skylark utils.",
+  "description": "The geom type library for skylark graphics.",
   "main": "-",
   "scripts": {
     "build": "sbundle build .",
@@ -10,7 +10,7 @@
   "homepage": "www.skylarkjs.org",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skylarkjs/skylark-data-geom.git"
+    "url": "git+https://github.com/skylark-graphics/skylark-graphics-geom.git"
   },
   "keywords": [
     "skylark",

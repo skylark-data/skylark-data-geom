@@ -1,5 +1,5 @@
 /**
- * skylark-data-geom - The math features enhancement for skylark utils.
+ * skylark-graphics-geom - The geom type library for skylark graphics.
  * @author Hudaokeji Co.,Ltd
  * @version v0.9.1
  * @link www.skylarkjs.org
@@ -75,7 +75,7 @@
   factory(define,require);
 
   if (!isAmd) {
-    var skylarkjs = require("skylark-langx/skylark");
+    var skylarkjs = require("skylark-langx-ns");
 
     if (isCmd) {
       module.exports = skylarkjs;
@@ -86,7 +86,7 @@
 
 })(function(define,require) {
 
-define('skylark-data-geom/geom',[
+define('skylark-graphics-geom/geom',[
     "skylark-langx/skylark",
     "skylark-langx/langx"
 ], function(skylark, langx) {
@@ -107,7 +107,7 @@ define('skylark-data-geom/geom',[
 
 	return skylark.attach("data.geom",geom);
 });
-define('skylark-data-geom/Geometry',[
+define('skylark-graphics-geom/Geometry',[
     "skylark-langx/langx",
     "./geom"
 ],function(langx, geom) {
@@ -120,7 +120,7 @@ define('skylark-data-geom/Geometry',[
 
 });
 
-define('skylark-data-geom/Point',[
+define('skylark-graphics-geom/Point',[
     "skylark-langx/langx",
     "./geom",
     "./Geometry",
@@ -184,7 +184,7 @@ define('skylark-data-geom/Point',[
 	
 });	
 
-define('skylark-data-geom/Arrow',[
+define('skylark-graphics-geom/Arrow',[
     "skylark-langx/langx",
     "./geom",
     "./Geometry",
@@ -301,7 +301,7 @@ define('skylark-data-geom/Arrow',[
     return Arrow;
 });
 
-define('skylark-data-geom/Circle',[
+define('skylark-graphics-geom/Circle',[
     "skylark-langx/langx",
     "./geom",
     "./Geometry"
@@ -377,7 +377,7 @@ define('skylark-data-geom/Circle',[
     return Circle;
 });
 
-define('skylark-data-geom/Ellipse',[
+define('skylark-graphics-geom/Ellipse',[
     "skylark-langx/langx",
     "./geom",
     "./Geometry",
@@ -457,7 +457,7 @@ define('skylark-data-geom/Ellipse',[
  * @Author: liwenfeng
  * @Date: 2013/02/28
  */
-define('skylark-data-geom/Line',[
+define('skylark-graphics-geom/Line',[
     "skylark-langx/langx",
     "./geom",
     "./Geometry",
@@ -548,7 +548,7 @@ define('skylark-data-geom/Line',[
 	
 });	
 
-define('skylark-data-geom/Polyline',[
+define('skylark-graphics-geom/Polyline',[
     "skylark-langx/langx",
     "./geom",
     "./Geometry"
@@ -600,7 +600,7 @@ define('skylark-data-geom/Polyline',[
 	
 });	
 
-define('skylark-data-geom/PolyStar',[
+define('skylark-graphics-geom/PolyStar',[
     "skylark-langx/langx",
     "./geom",
     "./Geometry",
@@ -682,7 +682,7 @@ define('skylark-data-geom/PolyStar',[
 	
 });	
 
-define('skylark-data-geom/Size',[
+define('skylark-graphics-geom/Size',[
     "skylark-langx/langx",
     "./geom",
     "./Geometry"
@@ -750,7 +750,7 @@ define('skylark-data-geom/Size',[
 	
 });	
 
-define('skylark-data-geom/Rect',[
+define('skylark-graphics-geom/Rect',[
     "skylark-langx/langx",
     "./geom",
     "./Geometry",
@@ -929,7 +929,7 @@ define('skylark-data-geom/Rect',[
 	
 });	
 
-define( 'skylark-data-geom/transform/Matrix',[
+define( 'skylark-graphics-geom/transform/Matrix',[
     "skylark-langx/langx",
     "../geom",
 ], function(langx,geom){
@@ -1814,7 +1814,7 @@ define( 'skylark-data-geom/transform/Matrix',[
 	return Matrix;
 });
 
-define('skylark-data-geom/transform/Transform',[
+define('skylark-graphics-geom/transform/Transform',[
     "skylark-langx/langx",
     "../geom",
 	"./Matrix"
@@ -1832,7 +1832,7 @@ define('skylark-data-geom/transform/Transform',[
 	return Transform;
 });
 
-define('skylark-data-geom/transform/MatrixTransform',[
+define('skylark-graphics-geom/transform/MatrixTransform',[
     "skylark-langx/langx",
     "../geom",
 	"./Transform",
@@ -1876,7 +1876,7 @@ define('skylark-data-geom/transform/MatrixTransform',[
 	
 });	
 
-define('skylark-data-geom/transform/RotateTransform',[
+define('skylark-graphics-geom/transform/RotateTransform',[
     "skylark-langx/langx",
     "../geom",
 	"./Transform",
@@ -1936,7 +1936,7 @@ define('skylark-data-geom/transform/RotateTransform',[
 	
 });	
 
-define('skylark-data-geom/transform/ScaleTransform',[
+define('skylark-graphics-geom/transform/ScaleTransform',[
     "skylark-langx/langx",
     "../geom",
     "./Transform",
@@ -2001,7 +2001,7 @@ define('skylark-data-geom/transform/ScaleTransform',[
 
 });
 
-define('skylark-data-geom/transform/SkewTransform',[
+define('skylark-graphics-geom/transform/SkewTransform',[
     "skylark-langx/langx",
     "../geom",
     "./Transform",
@@ -2049,7 +2049,7 @@ define('skylark-data-geom/transform/SkewTransform',[
 
 });
 
-define('skylark-data-geom/transform/TranslateTransform',[
+define('skylark-graphics-geom/transform/TranslateTransform',[
     "skylark-langx/langx",
     "../geom",
     "./Transform",
@@ -2150,7 +2150,7 @@ define('skylark-data-geom/transform/TranslateTransform',[
 	
 });	
 
-define('skylark-data-geom/main',[
+define('skylark-graphics-geom/main',[
     "./geom",
     "./Arrow",
     "./Circle",
@@ -2173,8 +2173,8 @@ define('skylark-data-geom/main',[
 
 	return geom;
 });
-define('skylark-data-geom', ['skylark-data-geom/main'], function (main) { return main; });
+define('skylark-graphics-geom', ['skylark-graphics-geom/main'], function (main) { return main; });
 
 
 },this);
-//# sourceMappingURL=sourcemaps/skylark-data-geom.js.map
+//# sourceMappingURL=sourcemaps/skylark-graphics-geom.js.map

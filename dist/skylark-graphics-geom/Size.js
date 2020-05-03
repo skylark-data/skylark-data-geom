@@ -1,5 +1,5 @@
 /**
- * skylark-data-geom - The math features enhancement for skylark utils.
+ * skylark-graphics-geom - The geom type library for skylark graphics.
  * @author Hudaokeji Co.,Ltd
  * @version v0.9.1
  * @link www.skylarkjs.org

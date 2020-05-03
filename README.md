@@ -1,11 +1,11 @@
-# skylark-data-geom
+# skylark-graphics-geom
 The skylarkjs geom class library.
 
 ## Dependences
 
 | Project                                                      | Status | Description                           |
 | ------------------------------------------------------------ | ------ | ------------------------------------- |
-| [skylark-langx](https://github.com/skylarklangx/skylark-langx) |        | Javascript language extension library |
+| [skylark-langx](https://github.com/skylark-langx/skylark-langx) |        | Javascript language extension library |
 
 
 ## Different builds
@@ -14,10 +14,10 @@ builds are in the directory dist.
 
 |                      | build                                  | Description              |
 | -------------------- | -------------------------------------- | ------------------------ |
-| full                 | skylark-data-geom-all.js              | included dependences     |
-| only                 | skylark-data-geom.js                  | not included dependences |
-| full （development） | uncompressed/skylark-data-geom-all.js | included dependences     |
-| only （development） | uncompressed/skylark-data-geom.js     | not included dependences |
+| full                 | skylark-graphics-geom-all.js              | included dependences     |
+| only                 | skylark-graphics-geom.js                  | not included dependences |
+| full （development） | uncompressed/skylark-graphics-geom-all.js | included dependences     |
+| only （development） | uncompressed/skylark-graphics-geom.js     | not included dependences |
 
 Please use the "full" version when using this library alone, and use the "only" version when using other skylark libraries.
 
@@ -25,9 +25,9 @@ Please use the "full" version when using this library alone, and use the "only" 
 
 You can get the latest version in many different ways:
 
-- Downloading [a ZIP file from master](https://github.com/skylarkutils/skylark-data-geom/archive/master.zip)
-- Cloning using Git: `git clone https://github.com/skylark-data/skylark-data-geom.git`
-- Installing via NPM: `npm install https://github.com/skylark-data/skylark-data-geom.git#master --save`
+- Downloading [a ZIP file from master](https://github.com/skylark-graphics/skylark-graphics-geom/archive/master.zip)
+- Cloning using Git: `git clone https://github.com/skylark-graphics/skylark-graphics-geom.git`
+- Installing via NPM: `npm install https://github.com/skylark-graphics/skylark-graphics-geom.git#master --save`
 
 ## Building 
 
