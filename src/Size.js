@@ -1,10 +1,10 @@
 define([
     "skylark-langx/langx",
-    "./geom",
+    "./shapes",
     "./Geometry"
-],function(langx,geom,Geometry) {
+],function(langx,shapes,Geometry) {
 
-    var Size = geom.Size = Geometry.inherit({
+    var Size = shapes.Size = Geometry.inherit({
         "klassName": "Size",
 		// width: Number
 		//		The width of the default rectangle, value 100.

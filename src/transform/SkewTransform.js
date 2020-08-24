@@ -1,13 +1,13 @@
 define([
     "skylark-langx/langx",
-    "../geom",
+    "../shapes",
     "./Transform",
     "./Matrix",
     "../Point",
     "../Rect"
 ], function(Class, Transform, Matrix, Point, Rect) {
 
-   var SkewTransform = geom.SkewTransform = Transform.inherit({
+   var SkewTransform = shapes.SkewTransform = Transform.inherit({
         "klassName": "SkewTransform",
 
         "value": {

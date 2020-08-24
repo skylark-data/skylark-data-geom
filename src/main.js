@@ -1,5 +1,5 @@
 define([
-    "./geom",
+    "./shapes",
     "./Arrow",
     "./Circle",
     "./Ellipse",
@@ -17,7 +17,7 @@ define([
     "./transform/SkewTransform",
     "./transform/Transform",
     "./transform/TranslateTransform"
-], function(geom) {
+], function(shapes) {
 
-	return geom;
+	return shapes;
 });

@@ -1,10 +1,10 @@
 define([
     "skylark-langx/langx",
-    "./geom",
+    "./shapes",
     "./Geometry"
-], function(langx, geom, Geometry) {
+], function(langx, shapes, Geometry) {
 
-    var Circle = geom.Circle = Geometry.inherit({
+    var Circle = shapes.Circle = Geometry.inherit({
         "klassName": "Circle",
 
         "bounds": {

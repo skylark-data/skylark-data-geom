@@ -1,9 +1,9 @@
 define([
     "skylark-langx/langx",
-    "./geom",
+    "./shapes",
     "./Geometry",
     "./Point"
-], function(langx, geom, Geometry, Point) {
+], function(langx, shapes, Geometry, Point) {
     var Direction = {
         "left" : 1,
         "top" : 2,
@@ -11,7 +11,7 @@ define([
         "bottom" : 4
     };
 
-    var Arrow = geom.Arrow = Geometry.inherit({
+    var Arrow = shapes.Arrow = Geometry.inherit({
         "klassName": "Arrow",
         "bounds": {
             get : function() {

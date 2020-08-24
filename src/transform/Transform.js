@@ -1,10 +1,10 @@
 define([
     "skylark-langx/langx",
-    "../geom",
+    "../shapes",
 	"./Matrix"
-], function(langx,geom, Matrix) {
+], function(langx,shapes, Matrix) {
 
-    var Transform = geom.Transform = langx.klass({
+    var Transform = shapes.Transform = langx.klass({
         "klassName": "Transform",
 		"value": {
 			get : function(){

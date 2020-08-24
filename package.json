@@ -1,16 +1,16 @@
 {
-  "name": "skylark-graphics-geom",
+  "name": "skylark-graphics-shapes",
   "version": "0.9.1",
-  "description": "The geom type library for skylark graphics.",
+  "description": "The skylark shape class library.",
   "main": "-",
   "scripts": {
-    "build": "sbundle build .",
+    "build": "slib build .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "homepage": "www.skylarkjs.org",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skylark-graphics/skylark-graphics-geom.git"
+    "url": "git+https://github.com/skylark-graphics/skylark-graphics-shapes.git"
   },
   "keywords": [
     "skylark",

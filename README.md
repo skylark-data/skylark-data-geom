@@ -1,5 +1,5 @@
-# skylark-graphics-geom
-The skylarkjs geom class library.
+# skylark-graphics-shapes
+The skylarkjs shapes class library.
 
 ## Dependences
 
@@ -14,10 +14,10 @@ builds are in the directory dist.
 
 |                      | build                                  | Description              |
 | -------------------- | -------------------------------------- | ------------------------ |
-| full                 | skylark-graphics-geom-all.js              | included dependences     |
-| only                 | skylark-graphics-geom.js                  | not included dependences |
-| full （development） | uncompressed/skylark-graphics-geom-all.js | included dependences     |
-| only （development） | uncompressed/skylark-graphics-geom.js     | not included dependences |
+| full                 | skylark-graphics-shapes-all.js              | included dependences     |
+| only                 | skylark-graphics-shapes.js                  | not included dependences |
+| full （development） | uncompressed/skylark-graphics-shapes-all.js | included dependences     |
+| only （development） | uncompressed/skylark-graphics-shapes.js     | not included dependences |
 
 Please use the "full" version when using this library alone, and use the "only" version when using other skylark libraries.
 
@@ -25,8 +25,8 @@ Please use the "full" version when using this library alone, and use the "only" 
 
 You can get the latest version in many different ways:
 
-- Downloading [a ZIP file from master](https://github.com/skylark-graphics/skylark-graphics-geom/archive/master.zip)
-- Cloning using Git: `git clone https://github.com/skylark-graphics/skylark-graphics-geom.git`
+- Downloading [a ZIP file from master](https://github.com/skylark-graphics/skylark-graphics-shapes/archive/master.zip)
+- Cloning using Git: `git clone https://github.com/skylark-graphics/skylark-graphics-shapes.git`
 - Installing via NPM: `npm install https://github.com/skylark-graphics/skylark-graphics-geom.git#master --save`
 
 ## Building 

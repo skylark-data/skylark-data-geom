@@ -1,10 +1,10 @@
 define([
     "skylark-langx/langx",
-    "./geom",
+    "./shapes",
     "./Geometry",
-], function(langx, geom, Geometry) {
+], function(langx, shapes, Geometry) {
 
-    var Ellipse = geom.Ellipse = Geometry.inherit({
+    var Ellipse = shapes.Ellipse = Geometry.inherit({
         "klassName": "Ellipse",
 
         "bounds": {

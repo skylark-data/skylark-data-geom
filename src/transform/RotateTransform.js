@@ -1,14 +1,14 @@
 define([
     "skylark-langx/langx",
-    "../geom",
+    "../shapes",
 	"./Transform",
 	"./Matrix",
 	"../Point",
 	"../Rect"
-],function(langx,geom,Transform,Matrix,Point,Rect) {
+],function(langx,shapes,Transform,Matrix,Point,Rect) {
 
 
-    var RotateTransform = geom.RotateTransform = Transform.inherit({
+    var RotateTransform = shapes.RotateTransform = Transform.inherit({
         "klassName": "RotateTransform",
 
         "value": {

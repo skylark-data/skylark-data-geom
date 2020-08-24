@@ -1,17 +1,17 @@
 define([
     "skylark-langx/langx",
-    "../geom",
+    "../shapes",
     "./Transform",
     "./Matrix",
     "../Point",
     "../Rect"
-],function(langx,geom,Transform,Matrix,Point,Rect) {
+],function(langx,shapes,Transform,Matrix,Point,Rect) {
 
     //|1   0   dx|
     //|0   1   dy|
     //|0   0    1|
 
-   var TranslateTransform = geom.TranslateTransform = Transform.inherit({
+   var TranslateTransform = shapes.TranslateTransform = Transform.inherit({
         "klassName": "TranslateTransform",
 
         "value": {
@@ -51,7 +51,7 @@ define([
 	var TranslateTransform = Class.declare(Transform,{
 		"-parent-"	:	Transform,
 		
-		"-module-"	:	"qface/geom/transform/TranslateTransform",
+		"-module-"	:	"qface/shapes/transform/TranslateTransform",
 
 		"-protected-" : {
 			"-methods-"	:	{
